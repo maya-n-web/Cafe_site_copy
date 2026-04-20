@@ -238,7 +238,7 @@ td {
   background-color: var(--bg);
 }
 
-.section_title {
+.access_title {
   flex: 0 0 20%;
   display: flex;
   justify-content: center;
@@ -247,12 +247,12 @@ td {
   margin: 20px;
 }
 
-.section_title .icon {
+.access_title .icon {
   width: 24px;
   height: auto;
 }
 
-.section_title h2 {
+.access_title h2 {
   margin: 0;
   font-size: 2.2rem;
   border: none;
@@ -449,7 +449,7 @@ footer p {
     width: 80%;
   }
 
-  .section_title {
+  .access_title {
     width: 100%;
     margin: 50px auto;
   }
@@ -471,6 +471,10 @@ footer p {
     font-weight: 400;
     text-align: left;
     padding: 20px;
+  }
+
+  .cafe_info dt {
+    border-bottom: 1px solid var(--border);
   }
 
   /* --- フッター(PC) --- */
