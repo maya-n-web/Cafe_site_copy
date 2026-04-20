@@ -1,0 +1,493 @@
+@charset "utf-8";
+
+/* =================================================
+  1. 変数定義・基本設定
+  （サイト全体のカラー、フォント、ボックス定義）
+================================================= */
+:root {
+  --text: #333;
+  --bg: #f3f2f1;
+  --border: #9c9a9a;
+  --max: 1000px;
+  --h2co: #372521;
+}
+
+body {
+  width: auto;
+  color: var(--text);
+  background: var(--bg);
+  font-family: "Noto Sans JP", sans-serif;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+
+/* =================================================
+  2. 共通要素スタイル
+  （リンク、画像、テキスト、見出しの基本形）
+================================================= */
+a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+li {
+  display: block;
+  list-style: none;
+}
+
+h2 {
+  color: var(--h2co);
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 600;
+  margin: 5%;
+}
+
+
+/* =================================================
+  3. ヘッダー
+  （ロゴ、メインナビゲーション）
+================================================= */
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  padding: 0;
+}
+
+.logo {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.main_nav {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.main_nav li {
+  width: 100%;
+  background-color: var(--h2co);
+  font-size: 1rem;
+  text-align: center;
+  border-right: 1px solid #fff;
+  padding: 15px 5px;
+}
+
+
+/* =================================================
+  4. メインコンテンツ
+  （ヒーロービジュアル、コンセプト）
+================================================= */
+.hero_content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+}
+
+.hero_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero_text {
+  position: absolute;
+  width: 50%;
+  max-width: 400px;
+  z-index: 10;
+}
+
+.main_concept {
+  width: 100%;
+}
+
+.main_concept h2,
+.menu_background h2 {
+  width: 90%;
+  color: var(--h2co);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 25px;
+  margin: 80px auto;
+}
+
+.concept_image,
+.main_concept p {
+  margin: auto 15px;
+  line-height: 2;
+  padding-bottom: 50px;
+}
+
+.concept_image img {
+  border-radius: 50px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+
+/* =================================================
+  5. メニューセクション
+  （ドリンクメニュー、テーブルレイアウト）
+================================================= */
+.menu {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.menu_title {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  height: auto;
+  gap: 10px;
+  padding: 30px;
+}
+
+.menu_title h2 {
+  font-size: 4vh;
+  color: #fff;
+  margin: 0;
+}
+
+.menu_title img {
+  width: 5vh;
+  height: auto;
+}
+
+.menu_background {
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
+  z-index: 10;
+}
+
+.menu_background img {
+  border-radius: 50px;
+  width: 100%;
+}
+
+.menu_drink {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 1.4rem;
+  padding: 0 10px;
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  text-align: left;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--border);
+  padding: 25px 15px;
+}
+
+
+/* =================================================
+  6. アクセス・インフォメーション
+  （地図、店舗情報リスト）
+================================================= */
+.access {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg);
+}
+
+.section_title {
+  flex: 0 0 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
+}
+
+.section_title .icon {
+  width: 24px;
+  height: auto;
+}
+
+.section_title h2 {
+  margin: 0;
+  font-size: 2.2rem;
+  border: none;
+}
+
+
+
+.cafe_info {
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  margin-bottom: 30px;
+
+}
+
+.cafe_info dt,
+.cafe_info dd {
+  text-align: left;
+  padding: 20px;
+  font-size: 1.4rem;
+}
+
+.cafe_info dt {
+  background-color: var(--h2co);
+  color: #fff;
+  padding: 10px;
+}
+
+.cafe_info dd {
+  color: var(--text);
+  margin: 0;
+  border-bottom: 1px solid var(--border);
+}
+
+dd:last-child {
+  border-bottom: none;
+}
+
+
+/* =================================================
+  7. フッター
+  （コピーライト、フッターロゴ）
+================================================= */
+footer {
+  background-color: var(--h2co);
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer_logo img {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+iframe {
+  aspect-ratio: 1 / 1;
+  height: auto;
+  width: auto;
+  margin: 10px 10px;
+}
+
+footer small {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+footer p {
+  font-size: 0.5rem;
+  margin: 0;
+}
+
+
+/* =================================================
+  8. レスポンシブデザイン (PC: 769px〜)
+  （PC閲覧時のレイアウト変更）
+================================================= */
+@media (min-width: 769px) {
+
+  /* --- ヘッダー(PC) --- */
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 80px;
+    align-items: center;
+  }
+
+  .logo {
+    width: 20%;
+    margin: 0;
+  }
+
+  .main_nav {
+    width: 80%;
+    gap: 20px;
+  }
+
+  .main_nav li {
+    background-color: var(--bg);
+    padding: 10px 20px;
+    border: none;
+    font-weight: 600;
+  }
+
+  .main_nav li a {
+    color: var(--h2co);
+  }
+
+  /* --- メインコンテンツ(PC) --- */
+  .main {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+
+  .main_concept h2,
+  .menu_background h2 {
+    align-self: start;
+    padding: 0;
+    margin: 10px;
+  }
+
+  .main_concept h2 {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    margin-bottom: 20px;
+  }
+
+  .hero_content {
+    margin-bottom: 100px;
+  }
+
+  .main_concept {
+    display: grid;
+    position: relative;
+    grid-template-columns: 47% 47%;
+    grid-template-rows: auto 1fr;
+    height: auto;
+    margin: 50px auto;
+    padding: 0;
+    gap: 6%;
+  }
+
+  .main_concept_p {
+    font-size: 1em;
+    z-index: 20;
+    margin-top: 60px;
+    padding: 20px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+  }
+
+  .concept_image {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  /* --- メニュー(PC) --- */
+  .menu_background {
+    flex-direction: row;
+    padding-top: 100px;
+  }
+
+  .menu_background figure {
+    width: 50%;
+  }
+
+  .menu_drink {
+    width: 50%;
+  }
+
+  .menu_drink h2 {
+    width: 100%;
+    padding-bottom: 20px;
+    text-align: left;
+  }
+
+  .menu_drink table {
+    width: 100%;
+    margin: 0;
+  }
+
+  .menu_drink table th,
+  .menu_drink table td {
+    text-align: left;
+    padding-left: 10px;
+  }
+
+  /* --- アクセス(PC) --- */
+  .access {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .section_title {
+    width: 100%;
+    margin: 50px auto;
+  }
+
+  .access iframe {
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    margin: 0 auto;
+  }
+
+  .cafe_info {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 100%;
+  }
+
+  .cafe_info dt,
+  .cafe_info dd {
+    font-weight: 400;
+    text-align: left;
+    padding: 20px;
+  }
+
+  /* --- フッター(PC) --- */
+  footer {
+    padding: 0;
+  }
+
+  .footer_nav {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .footer_logo img {
+    width: 100%;
+  }
+}
