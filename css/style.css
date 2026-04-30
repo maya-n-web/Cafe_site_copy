@@ -12,8 +12,11 @@
   --h2co: #372521;
 }
 
+html {
+  margin: 0 auto;
+}
+
 body {
-  width: auto;
   color: var(--text);
   background: var(--bg);
   font-family: "Noto Sans JP", sans-serif;
@@ -26,8 +29,6 @@ body {
 #wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  padding: 40px;
 }
 
 
@@ -52,7 +53,7 @@ img {
   max-width: 100%;
 }
 
-li {
+ul {
   display: block;
   list-style: none;
 }
@@ -312,8 +313,6 @@ footer {
 
 
 .footer_nav_wrapper {
-  width: 100vh;
-  height: auto;
   text-align: center;
   padding: 0;
   display: flex;
