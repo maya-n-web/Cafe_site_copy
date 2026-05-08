@@ -128,7 +128,9 @@ h1 {
 .hero_text {
   position: absolute;
   width: 50%;
-  max-width: 400px;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 10;
 }
 
